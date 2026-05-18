@@ -1,8 +1,4 @@
-# RAB122 Linux Server Administration Project
-
-## Student Information
-- Name: Niranjan
-- Course: RAB122
+# Linux Server Administration Project
 - Project: Linux Server Administration & Security
 
 ## Project Overview
