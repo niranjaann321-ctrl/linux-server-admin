@@ -1,31 +1,33 @@
 # Week 1 Journal
 
-## Objectives
+# Objectives
 
-- Install Ubuntu Server
-- Configure VirtualBox
-- Configure SSH remote administration
+- Install Ubuntu Server in VirtualBox
 - Configure networking
+- Enable SSH access
+- Verify remote administration
+- Update system packages
 
 ---
 
-# Virtual Machine Setup
+# Ubuntu Server Installation
 
-Installed Ubuntu Server 26.04 LTS using Oracle VirtualBox.
+Installed Ubuntu Server using:
 
-Configuration:
-- RAM: 4096 MB
-- CPU: 2 cores
-- Storage: 25 GB
-- Network:
-  - NAT Adapter
-  - Host-only Adapter
+- Oracle VirtualBox
+- Ubuntu Server ISO
+
+Configured:
+- 2 GB RAM
+- 1 CPU
+- 25 GB virtual disk
+
+Enabled:
+- OpenSSH Server during installation
 
 ---
 
-# OpenSSH Configuration
-
-Installed OpenSSH Server during Ubuntu installation.
+# SSH Configuration
 
 Verified SSH service using:
 
@@ -33,75 +35,85 @@ Verified SSH service using:
 sudo systemctl status ssh
 ```
 
-Successfully connected remotely using:
-
-```bash
-ssh ubuntuuser@192.168.56.101
-```
+Purpose:
+- allow remote administration
+- secure server management
 
 ---
 
 # Network Configuration
 
-## IP Address
+Checked network interfaces using:
 
 ```bash
 ip addr
 ```
 
-Server IP:
-```text
-192.168.56.101
-```
+Verified:
+- server IP address
+- network connectivity
 
 ---
 
-# System Information
+# System Update
 
-## Kernel
-
-```bash
-uname -a
-```
-
-## Memory
+Updated packages using:
 
 ```bash
-free -h
+sudo apt update && sudo apt upgrade -y
 ```
 
-## Disk
+Purpose:
+- install latest security patches
+- update system packages
+
+---
+
+# Remote Administration
+
+Connected remotely from host machine using:
 
 ```bash
-df -h
+ssh ubuntuuser@192.168.56.101
 ```
 
-## Ubuntu Version
+Verified:
+- successful SSH login
+- remote terminal access
 
-```bash
-lsb_release -a
-```
+---
 
+# Screenshots
 
+## SSH Login
 
-# Problems Faced
+![SSH Login](phase1-screenshots/phase1-ssh-login.png)
 
-## Time Synchronization Issue
+---
 
-The VM time was incorrect which caused apt update failures.
+## SSH Service Status
 
-### Solution
-- Restarted VM
-- Corrected time synchronization
-- Re-ran updates
+![SSH Status](phase1-screenshots/phase1-ssh-status.png)
+
+---
+
+## Network Information
+
+![IP Address](phase1-screenshots/phase1-ipaddr.png)
+
+---
+
+## System Update
+
+![System Update](phase1-screenshots/phase1-system-update.png)
 
 ---
 
 # Reflection
 
-This week I learned:
+This phase improved understanding of:
 - Linux server installation
+- VirtualBox configuration
 - SSH remote administration
-- VirtualBox networking
-- Command-line administration
-- Basic troubleshooting
+- network configuration
+- system updates
