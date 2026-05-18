@@ -82,23 +82,7 @@ df -h
 lsb_release -a
 ```
 
----
 
-# Screenshots
-
-## SSH Login
-
-![SSH Login](images/ssh-login.png)
-
-## SSH Status
-
-![SSH Status](images/ssh-status.png)
-
-## Network Information
-
-![IP Address](images/ip-addr.png)
-
----
 
 # Problems Faced
 
